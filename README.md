@@ -20,22 +20,22 @@ To use this package:
 Run this command:
 
 ```yaml
-flutter pub add intl_phone_field
+flutter pub add intl_phone_field2
 ```
 
 Or, add the following to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  intl_phone_field: ^3.1.0
+  intl_phone_field: ^3.2.2
 ```
 
 ## How to Use
 
-Simply create a `IntlPhoneField` widget, and pass the required params:
+Simply create a `IntlPhoneField2` widget, and pass the required params:
 
 ```dart
-IntlPhoneField(
+IntlPhoneField2(
     decoration: InputDecoration(
         labelText: 'Phone Number',
         border: OutlineInputBorder(
