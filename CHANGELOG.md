@@ -1,3 +1,7 @@
+## [3.2.1] - Release
+- Added: Option to set Popup Screen width
+
+
 ## [3.2.0] - Release
 
 - Add `autofillHints` and disable posibility.
