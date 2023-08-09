@@ -126,7 +126,7 @@ class CountryPickerDialogState extends State<CountryPickerDialog> {
                       leading: kIsWeb
                           ? Image.asset(
                               'assets/flags/${_filteredCountries[index].code.toLowerCase()}.png',
-                              package: 'intl_phone_field',
+                              package: 'intl_phone_field2',
                               width: 32,
                             )
                           : Text(
