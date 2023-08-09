@@ -243,8 +243,11 @@ class IntlPhoneField extends StatefulWidget {
   //enable the autofill hint for phone number
   final bool disableAutoFillHints;
 
+// The width of country selection popup Screen
+  final double? popupWidth;
   const IntlPhoneField({
     Key? key,
+    this.popupWidth,
     this.initialCountryCode,
     this.languageCode = 'en',
     this.disableAutoFillHints = false,
@@ -354,6 +357,7 @@ class IntlPhoneFieldState extends State<IntlPhoneField> {
       useRootNavigator: false,
       builder: (context) => StatefulBuilder(
         builder: (ctx, setState) => CountryPickerDialog(
+          popupWidth: widget.popupWidth,
           languageCode: widget.languageCode.toLowerCase(),
           style: widget.pickerDialogStyle,
           filteredCountries: filteredCountries,

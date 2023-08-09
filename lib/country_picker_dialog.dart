@@ -46,6 +46,7 @@ class CountryPickerDialog extends StatefulWidget {
   final List<Country> filteredCountries;
   final PickerDialogStyle? style;
   final String languageCode;
+  final double? popupWidth;
 
   const CountryPickerDialog({
     Key? key,
@@ -54,6 +55,7 @@ class CountryPickerDialog extends StatefulWidget {
     required this.countryList,
     required this.onCountryChanged,
     required this.selectedCountry,
+    required this.popupWidth,
     required this.filteredCountries,
     this.style,
   }) : super(key: key);
@@ -91,6 +93,7 @@ class CountryPickerDialogState extends State<CountryPickerDialog> {
               : defaultHorizontalPadding),
       backgroundColor: widget.style?.backgroundColor,
       child: Container(
+        width: widget.popupWidth,
         padding: widget.style?.padding ?? const EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
