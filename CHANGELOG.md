@@ -1,6 +1,7 @@
+## [3.2.2] - Release
+- Fix: Country Flags not appearing
 ## [3.2.1] - Release
 - Added: Option to set Popup Screen width
-
 
 ## [3.2.0] - Release
 
