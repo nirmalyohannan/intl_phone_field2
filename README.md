@@ -5,7 +5,7 @@
 
 [![pub package](https://img.shields.io/pub/v/intl_phone_field.svg)](https://pub.dev/packages/intl_phone_field)
 
-A customised Flutter TextFormField to input international phone number along with country code.
+This Package is a fork of "intl_phone_field" (https://pub.dev/packages/intl_phone_field).
 
 This widget can be used to make customised text field to take phone number input for any country along with an option to choose country code from a dropdown.
 
