@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:intl_phone_field2/intl_phone_field.dart';
 
 void main() {
   runApp(MyApp());
