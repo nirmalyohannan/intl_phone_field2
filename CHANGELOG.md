@@ -1,3 +1,5 @@
+## [3.2.4] - Release
+- Added: Positioned Popup Option
 ## [3.2.2] - Release
 - Fix: Country Flags not appearing
 ## [3.2.1] - Release
