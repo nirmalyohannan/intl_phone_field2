@@ -366,7 +366,7 @@ class IntlPhoneFieldState extends State<IntlPhoneField> {
         child: StatefulBuilder(
           builder: (ctx, setState) => CountryPickerDialog(
             popupWidth: widget.popupWidth,
-            offset: widget.positionedPopup ? tapDetails.globalPosition : Offset(0, 0),
+            offset: widget.positionedPopup ? tapDetails.globalPosition : const Offset(0, 0),
             alignment: widget.positionedPopup ? Alignment.topLeft : null,
             languageCode: widget.languageCode.toLowerCase(),
             style: widget.pickerDialogStyle,

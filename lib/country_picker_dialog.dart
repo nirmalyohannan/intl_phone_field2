@@ -90,7 +90,7 @@ class CountryPickerDialogState extends State<CountryPickerDialog> {
     const defaultHorizontalPadding = 40.0;
     const defaultVerticalPadding = 24.0;
     return Transform.translate(
-      offset: widget.offset ?? Offset(0, 0),
+      offset: widget.offset ?? const Offset(0, 0),
       child: Dialog(
         alignment: widget.alignment,
         insetPadding: EdgeInsets.symmetric(
