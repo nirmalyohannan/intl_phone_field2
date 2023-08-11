@@ -87,7 +87,7 @@ class CountryPickerDialogState extends State<CountryPickerDialog> {
   Widget build(BuildContext context) {
     final mediaWidth = MediaQuery.of(context).size.width;
     final width = widget.style?.width ?? mediaWidth;
-    const defaultHorizontalPadding = 40.0;
+    final defaultHorizontalPadding = widget.alignment == null ? 40.0 : 0.0;
     const defaultVerticalPadding = 24.0;
     return Transform.translate(
       offset: widget.offset ?? const Offset(0, 0),

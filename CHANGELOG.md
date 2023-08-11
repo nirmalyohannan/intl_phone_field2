@@ -1,3 +1,6 @@
+## [3.3.1] - Release
+- fix: Positioned Popup made more accurate
+- fix: Background transparent during normal Popup
 ## [3.3.0] - Release
 - Added: Positioned Popup Option
 ## [3.2.2] - Release

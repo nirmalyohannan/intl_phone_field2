@@ -358,7 +358,7 @@ class IntlPhoneFieldState extends State<IntlPhoneField> {
     filteredCountries = _countryList;
 
     await showDialog(
-      barrierColor: Colors.transparent,
+      barrierColor: widget.positionedPopup ? Colors.transparent : Colors.black45,
       context: context,
       useRootNavigator: false,
       builder: (context) => SizedBox(
