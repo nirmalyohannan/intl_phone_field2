@@ -245,9 +245,13 @@ class IntlPhoneField extends StatefulWidget {
 
 // The width of country selection popup Screen
   final double? popupWidth;
+
+  // Show Popup in the position of click
+  final bool positionedPopup;
   const IntlPhoneField({
     Key? key,
     this.popupWidth,
+    this.positionedPopup = false,
     this.initialCountryCode,
     this.languageCode = 'en',
     this.disableAutoFillHints = false,
@@ -350,25 +354,32 @@ class IntlPhoneFieldState extends State<IntlPhoneField> {
     }
   }
 
-  Future<void> _changeCountry() async {
+  Future<void> _changeCountry(TapUpDetails tapDetails) async {
     filteredCountries = _countryList;
+
     await showDialog(
+      barrierColor: Colors.transparent,
       context: context,
       useRootNavigator: false,
-      builder: (context) => StatefulBuilder(
-        builder: (ctx, setState) => CountryPickerDialog(
-          popupWidth: widget.popupWidth,
-          languageCode: widget.languageCode.toLowerCase(),
-          style: widget.pickerDialogStyle,
-          filteredCountries: filteredCountries,
-          searchText: widget.searchText,
-          countryList: _countryList,
-          selectedCountry: _selectedCountry,
-          onCountryChanged: (Country country) {
-            _selectedCountry = country;
-            widget.onCountryChanged?.call(country);
-            setState(() {});
-          },
+      builder: (context) => SizedBox(
+        // width: widget.popupWidth,
+        child: StatefulBuilder(
+          builder: (ctx, setState) => CountryPickerDialog(
+            popupWidth: widget.popupWidth,
+            offset: widget.positionedPopup ? tapDetails.globalPosition : Offset(0, 0),
+            alignment: widget.positionedPopup ? Alignment.topLeft : null,
+            languageCode: widget.languageCode.toLowerCase(),
+            style: widget.pickerDialogStyle,
+            filteredCountries: filteredCountries,
+            searchText: widget.searchText,
+            countryList: _countryList,
+            selectedCountry: _selectedCountry,
+            onCountryChanged: (Country country) {
+              _selectedCountry = country;
+              widget.onCountryChanged?.call(country);
+              setState(() {});
+            },
+          ),
         ),
       ),
     );
@@ -448,7 +459,7 @@ class IntlPhoneFieldState extends State<IntlPhoneField> {
         decoration: widget.dropdownDecoration,
         child: InkWell(
           borderRadius: widget.dropdownDecoration.borderRadius as BorderRadius?,
-          onTap: widget.enabled ? _changeCountry : null,
+          onTapUp: (details) => widget.enabled ? _changeCountry(details) : null,
           child: Padding(
             padding: widget.flagsButtonPadding,
             child: Row(

@@ -55,6 +55,8 @@ class _MyAppState extends State<MyApp> {
                 ),
                 IntlPhoneField(
                   focusNode: focusNode,
+                  positionedPopup: true,
+                  popupWidth: MediaQuery.sizeOf(context).width / 4,
                   decoration: InputDecoration(
                     labelText: 'Phone Number',
                     border: OutlineInputBorder(
