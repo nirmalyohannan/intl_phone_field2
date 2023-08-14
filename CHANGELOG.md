@@ -1,3 +1,5 @@
+## [3.3.2] - Release
+- Add: isDense and ContentPadding Option
 ## [3.3.1] - Release
 - fix: Positioned Popup made more accurate
 - fix: Background transparent during normal Popup

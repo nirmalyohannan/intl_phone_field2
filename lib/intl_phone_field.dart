@@ -248,9 +248,14 @@ class IntlPhoneField extends StatefulWidget {
 
   // Show Popup in the position of click
   final bool positionedPopup;
+
+  final EdgeInsets? textFieldPadding;
+  final bool? textFieldIsDense;
   const IntlPhoneField({
     Key? key,
     this.popupWidth,
+    this.textFieldPadding,
+    this.textFieldIsDense,
     this.positionedPopup = false,
     this.initialCountryCode,
     this.languageCode = 'en',
@@ -405,6 +410,8 @@ class IntlPhoneFieldState extends State<IntlPhoneField> {
       showCursor: widget.showCursor,
       onFieldSubmitted: widget.onSubmitted,
       decoration: widget.decoration.copyWith(
+        isDense: widget.textFieldIsDense,
+        contentPadding: widget.textFieldPadding,
         prefixIcon: _buildFlagsButton(),
         counterText: !widget.enabled ? '' : null,
       ),
