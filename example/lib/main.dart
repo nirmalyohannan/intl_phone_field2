@@ -57,6 +57,7 @@ class _MyAppState extends State<MyApp> {
                   focusNode: focusNode,
                   positionedPopup: true,
                   textFieldIsDense: true,
+                  flagWidth: 20,
                   textFieldPadding: EdgeInsets.all(0),
                   popupWidth: MediaQuery.sizeOf(context).width / 4,
                   decoration: InputDecoration(

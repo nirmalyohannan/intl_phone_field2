@@ -1,3 +1,5 @@
+## [3.3.3] - Release
+- Add: flag size option
 ## [3.3.2] - Release
 - Add: isDense and ContentPadding Option
 ## [3.3.1] - Release

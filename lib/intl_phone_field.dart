@@ -251,9 +251,11 @@ class IntlPhoneField extends StatefulWidget {
 
   final EdgeInsets? textFieldPadding;
   final bool? textFieldIsDense;
+  final double flagWidth;
   const IntlPhoneField({
     Key? key,
     this.popupWidth,
+    this.flagWidth = 32,
     this.textFieldPadding,
     this.textFieldIsDense,
     this.positionedPopup = false,
@@ -487,7 +489,7 @@ class IntlPhoneFieldState extends State<IntlPhoneField> {
                       ? Image.asset(
                           'assets/flags/${_selectedCountry.code.toLowerCase()}.png',
                           package: 'intl_phone_field2',
-                          width: 32,
+                          width: widget.flagWidth,
                         )
                       : Text(
                           _selectedCountry.flag,
